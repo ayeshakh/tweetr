@@ -17,7 +17,19 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #eee;
+  background-color: #eee;  /* #eee */
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+main {
+  margin: 0 auto; /* to push it down otherwise you wont see it because the header and logo is fixed */
+    width: 450px;
+    border: 3px ;
+    padding: 19px;
+    padding-bottom: 140px;
+    padding-top: 140px;
+    background-color: #FFFFFF;
+     position: inherit;
 }
 
 /*
