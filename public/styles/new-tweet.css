@@ -17,6 +17,7 @@
  .counter {
   float: right;
   font-style: italic;
+
  }
 
  .new-tweet h2 {
@@ -25,3 +26,7 @@
   border-bottom-color: black;
   border-bottom-style: solid;
  }
+
+.counter.overLimit{
+  color: red; /* change color is class changes
+}
