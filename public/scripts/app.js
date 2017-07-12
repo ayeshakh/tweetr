@@ -39,7 +39,7 @@ var data = [
        "handle": "@johann49"
      },
      "content": {
-       "text": "<script>alert('uh oh!');</script>" // causes alert to pop up when we run tweets
+       "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit" // causes alert to pop up when we run tweets
      },
      "created_at": 1461113796368
    }
@@ -84,7 +84,7 @@ $(document).ready(function(){
                     <h2> ${tweet.user.name} </h2>
                     <h6 class ="profile-name"> ${tweet.user.handle} </h6>
                   </header>
-                  <div class="content-holder"> <div class="content">${tweet.content.text}</div> </div>
+                  <div class="content-holder"> <div class="content">${escape(tweet.content.text)}</div> </div>
                   <footer>${tweet.created_at}</footer>
                 </article>`
 
@@ -94,18 +94,11 @@ $(document).ready(function(){
   renderTweets(data);
 });
 
-//createTweetElement takes tweetData and creates an html element and appends that to our section id other-tweets
-// here $tweet is just creating a variable. by convention jquery variables are given $name. $ has not other meaning.
-
-// var $tweet = createTweetElement(tweetData); //calling the function to create element
-
-// console.log($tweet); //checking if the element is being created
-
-// $(document).ready(function() {      //if the document is ready than append the html to our section id.
-//   $('#other-tweets').append($tweet);
-// })
-//$("<h>")
-
-
-
+//This function makes malicious javascript which might come as text from the user to a string so if doesnt affect our app.
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+ //checked with the alert <script> tag uh oh. it didnt pop up. it was treated like a string
 
