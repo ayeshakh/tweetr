@@ -64,6 +64,16 @@ var tweetData = {
 
 
 $(document).ready(function(){
+
+  function loadTweets(){        //gets our tweets from the /tweets page.
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      success: renderTweets
+    })
+  }
+    loadTweets();
+
   function renderTweets(tweets) {
 
        for (tweet in tweets) {
@@ -75,9 +85,7 @@ $(document).ready(function(){
        }
  }
 
-
   function createTweetElement(tweet) {
-
     var $tweet =`<article class="tweet-container">
                   <header class="tweet">
                     <img class="avatars" src="${tweet.user.avatars.small}">
@@ -90,8 +98,7 @@ $(document).ready(function(){
 
     return $tweet;
   }
-
-  renderTweets(data);
+  //renderTweets(data);
 });
 
 //This function makes malicious javascript which might come as text from the user to a string so if doesnt affect our app.
