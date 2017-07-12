@@ -54,16 +54,22 @@ opacity:1;
 article header.tweet{
   height: 60px;
   background-color: lightgrey;
+  margin: 0;
 
 }
-article h1{
+article h2{
+  margin: 0;
   float: left;
-  margin: 10px;
+  padding-left: 10px;
+  padding-top: 5px
+
 }
 
 article h6.profile-name{
   float: right;
   display: inline;
+  margin: 0;
+  padding: 20px 10px;
 
 }
 

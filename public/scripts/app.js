@@ -75,7 +75,6 @@ $(document).ready(function(){
     loadTweets();
 
   function renderTweets(tweets) {
-
        for (tweet in tweets) {
      // calls createTweetElement for each tweet
          let tweetData = tweets[tweet];
@@ -136,7 +135,8 @@ function dataCheck(data){             //helper function
   });
 
   $("button").on("click", function() {
-    $(".new-tweet").fadeToggle(750);
+    $(".new-tweet").slideToggle(750);
+    $("textarea").focus();
   })
 });
 
