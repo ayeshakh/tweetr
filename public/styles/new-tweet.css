@@ -28,5 +28,72 @@
  }
 
 .counter.overLimit{
-  color: red; /* change color is class changes
+  color: red; /* change color is class changes */
 }
+
+article.tweet-container{
+
+  border: 2px gray solid;
+  border-radius: 7px;
+  top: 10px;
+}
+
+section#other-tweets{
+  margin-top: 100px;
+  margin-left: 32px;
+  margin-right: 32px;
+  opacity:0.4;
+}
+
+section#other-tweets:hover{
+opacity:1;
+}
+
+
+article header.tweet{
+  height: 60px;
+  background-color: lightgrey;
+
+}
+article h1{
+  float: left;
+  margin: 10px;
+}
+
+article h6.profile-name{
+  float: right;
+  display: inline;
+
+}
+
+article .avatars{
+  float: left;
+  width: 80px;
+  height: 50px;
+}
+
+article footer{
+  height: 30px;
+  border-top: lightgrey 1px solid;
+  padding-left: 10px;
+}
+
+article .content-holder{
+  height: 75px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+}
+
+article .content{
+  word-wrap: break-word;
+}
+
+
+
+
+
+
+
+
