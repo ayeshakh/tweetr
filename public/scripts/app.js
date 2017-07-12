@@ -100,17 +100,44 @@ $(document).ready(function(){
   }
   //renderTweets(data);
 
+function dataCheck(data){             //helper function
+  //console.log("data2:", data)
+  console.log("datalength:", data.length);
+  if (data.length > 140){
+
+    alert("Your tweet has exceeded limit");
+    return false;
+  }else if ((data === "")|| (data === null)){
+    alert("Please enter text");
+    return false;
+  }else{
+    return true;
+  }
+}
+
+
     $(".form-content").on("submit", function(event){
     event.preventDefault(); //prevents the page from going to /tweets
     //console.log($(this).serialize()); //for us to see what data we are sending making into a query string
+      let data = $(this).find("textarea").val(); //this will give us the actual value of data not serialize the data
+      //dataCheck(data);
+      //console.log("data:", data);
+      if (dataCheck(data)){ // Will call the function to run, if return true do this
       $.ajax({
-        url: '/tweets',
-        method: 'POST',
-        data:$(this).serialize(), //the data from the tweets
-        success: loadTweets // on success pass the function loadtweets
-    })
+            url: '/tweets',
+            method: 'POST',
+            data: $(this).serialize(), //the data from the tweets
+            success: () => {    //ES6 function does not change the value of this which refers to the form. otherwise normal function would change this to refer to the function itself
+            loadTweets();
+            $(this).find("textarea").val(""); //this will clear the form
+          }
+      })
+    }// on success pass the function loadtweets
   });
 });
+
+
+
 
 //This function makes malicious javascript which might come as text from the user to a string so if doesnt affect our app.
 function escape(str) {
