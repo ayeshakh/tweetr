@@ -62,45 +62,49 @@ var tweetData = {
   "created_at": 1461116232227
 }
 
-// function renderTweets(tweets) {
-//    $(document).ready(function(){
-//        for (tweet in tweets) {
-//      // calls createTweetElement for each tweet
-//          let tweetData = tweets[tweet];
-//          let $tweet = createTweetElement(tweetData);
-//      // takes return value and appends it to the tweets container
-//          $('#tweets-container').append($tweet)
-//        }
-//    }
-//renderTweets(data);
 
-function createTweetElement(tweet) {
+$(document).ready(function(){
+  function renderTweets(tweets) {
 
-var $tweet =`<article class="tweet-container">
-                <header class="tweet">
-                  <img class="avatars" src="${tweetData.user.avatars.small}">
-                  <h1> ${tweetData.user.name} </h1>
-                  <h6 class ="profile-name"> ${tweetData.user.handle} </h6>
-                </header>
-                <div class="content-holder"> <div class="content">${tweetData.content.text}</div> </div>
-                <footer>${tweetData.created_at}</footer>
-              </article>`
+       for (tweet in tweets) {
+     // calls createTweetElement for each tweet
+         let tweetData = tweets[tweet];
+         let $tweet = createTweetElement(tweetData);
+     // takes return value and appends it to the tweets container
+         $('#other-tweets').append($tweet)
+       }
+ }
 
-return $tweet;
-}
+
+  function createTweetElement(tweet) {
+
+    var $tweet =`<article class="tweet-container">
+                  <header class="tweet">
+                    <img class="avatars" src="${tweet.user.avatars.small}">
+                    <h2> ${tweet.user.name} </h2>
+                    <h6 class ="profile-name"> ${tweet.user.handle} </h6>
+                  </header>
+                  <div class="content-holder"> <div class="content">${tweet.content.text}</div> </div>
+                  <footer>${tweet.created_at}</footer>
+                </article>`
+
+    return $tweet;
+  }
+
+  renderTweets(data);
+});
 
 //createTweetElement takes tweetData and creates an html element and appends that to our section id other-tweets
 // here $tweet is just creating a variable. by convention jquery variables are given $name. $ has not other meaning.
 
-var $tweet = createTweetElement(tweetData); //calling the function to create element
+// var $tweet = createTweetElement(tweetData); //calling the function to create element
 
-console.log($tweet); //checking if the element is being created
+// console.log($tweet); //checking if the element is being created
 
-$(document).ready(function() {      //if the document is ready than append the html to our section id.
-  $('#other-tweets').append($tweet);
-})
+// $(document).ready(function() {      //if the document is ready than append the html to our section id.
+//   $('#other-tweets').append($tweet);
+// })
 //$("<h>")
-
 
 
 
