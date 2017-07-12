@@ -81,7 +81,7 @@ $(document).ready(function(){
          let tweetData = tweets[tweet];
          let $tweet = createTweetElement(tweetData);
      // takes return value and appends it to the tweets container
-         $('#other-tweets').append($tweet)
+         $('#other-tweets').prepend($tweet) //prepend makes the tweet appear at the top
        }
  }
 
