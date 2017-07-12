@@ -3,7 +3,7 @@
   border-style: solid;
   border-radius: 7px;
   padding: 10px;
-  margin: 2em;
+  margin: 2em 2em 5px;
   background-color: #eee;
   position: relative;
  }
@@ -40,7 +40,7 @@ article.tweet-container{
 }
 
 section#other-tweets{
-  margin-top: 70px;
+  margin-top: 10px;
   margin-left: 32px;
   margin-right: 32px;
   opacity:0.4;

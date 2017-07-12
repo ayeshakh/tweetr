@@ -134,7 +134,12 @@ function dataCheck(data){             //helper function
       })
     }// on success pass the function loadtweets
   });
+
+  $("button").on("click", function() {
+    $(".new-tweet").fadeToggle(750);
+  })
 });
+
 
 
 
