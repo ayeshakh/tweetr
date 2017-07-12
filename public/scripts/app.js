@@ -102,3 +102,19 @@ function escape(str) {
 }
  //checked with the alert <script> tag uh oh. it didnt pop up. it was treated like a string
 
+$(".form-content").on("submit", function(event){
+  event.preventDefault();
+  console.log($(this).serialize()); //for us to see what data we are sending making into a query string
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      success: function(morePostsHtml) {
+        console.log('Success: ', morePostsHtml); // to gives an idea that we are successfull
+    }
+  })
+});
+
+
+
+
+

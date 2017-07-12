@@ -36,10 +36,11 @@ article.tweet-container{
   border: 2px gray solid;
   border-radius: 7px;
   top: 10px;
+  margin: 10px 0;
 }
 
 section#other-tweets{
-  margin-top: 100px;
+  margin-top: 70px;
   margin-left: 32px;
   margin-right: 32px;
   opacity:0.4;
