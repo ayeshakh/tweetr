@@ -99,6 +99,17 @@ $(document).ready(function(){
     return $tweet;
   }
   //renderTweets(data);
+
+    $(".form-content").on("submit", function(event){
+    event.preventDefault(); //prevents the page from going to /tweets
+    //console.log($(this).serialize()); //for us to see what data we are sending making into a query string
+      $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data:$(this).serialize(), //the data from the tweets
+        success: loadTweets // on success pass the function loadtweets
+    })
+  });
 });
 
 //This function makes malicious javascript which might come as text from the user to a string so if doesnt affect our app.
@@ -109,17 +120,7 @@ function escape(str) {
 }
  //checked with the alert <script> tag uh oh. it didnt pop up. it was treated like a string
 
-$(".form-content").on("submit", function(event){
-  event.preventDefault();
-  console.log($(this).serialize()); //for us to see what data we are sending making into a query string
-    $.ajax({
-      url: '/tweets',
-      method: 'POST',
-      success: function(morePostsHtml) {
-        console.log('Success: ', morePostsHtml); // to gives an idea that we are successfull
-    }
-  })
-});
+
 
 
 
