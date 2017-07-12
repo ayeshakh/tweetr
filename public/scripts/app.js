@@ -39,7 +39,7 @@ var data = [
        "handle": "@johann49"
      },
      "content": {
-       "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
+       "text": "<script>alert('uh oh!');</script>" // causes alert to pop up when we run tweets
      },
      "created_at": 1461113796368
    }
