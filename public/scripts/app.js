@@ -65,7 +65,7 @@ var tweetData = {
 
 $(document).ready(function(){
 
-  function loadTweets(){        //gets our tweets from the /tweets page.
+  function loadTweets() {  //gets our tweets from the /tweets page.
     $.ajax({
       url: '/tweets',
       method: 'GET',
@@ -82,7 +82,7 @@ $(document).ready(function(){
      // takes return value and appends it to the tweets container
          $('#other-tweets').prepend($tweet) //prepend makes the tweet appear at the top
        }
- }
+  }
 
   function createTweetElement(tweet) {
     var $tweet =`<article class="tweet-container">
