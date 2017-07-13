@@ -92,7 +92,7 @@ $(document).ready(function(){
                     <h6 class ="profile-name"> ${tweet.user.handle} </h6>
                   </header>
                   <div class="content-holder"> <div class="content">${escape(tweet.content.text)}</div> </div>
-                  <footer>${tweet.created_at}</footer>
+                  <footer>${moment(tweet.created_at).fromNow()}</footer>
                 </article>`
 
     return $tweet;

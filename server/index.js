@@ -7,11 +7,14 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 
+
+
 const {MongoClient} = require("mongodb"); // its same  as const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 //let db ;
