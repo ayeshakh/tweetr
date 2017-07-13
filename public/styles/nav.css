@@ -5,18 +5,16 @@
  */
 
 #nav-bar {
-position: fixed;
-height: 80px;
-width: auto;
-left: 0;
-right: 0;
-top: 0;
-padding: 0 2em;
-z-index:1000;
-display: block;
-background-color: #00a087;
-
-
+  position: fixed;
+  height: 80px;
+  width: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 2em;
+  z-index:1000;
+  display: block;
+  background-color: #00a087;
 }
 
 #nav-bar .logo {
@@ -34,30 +32,23 @@ background-color: #00a087;
   color: #e8fdff;
   height: 70px;
   margin: 0 10px
-
 }
 
-#nav-bar button{
-border-radius: 7px;
-border: 2px black solid;
-background-color: #FFFFFF;
-float:right;
-opacity:0.8;
-display: inline;
-height: 70px;
-width: 150px;
-margin-top: 5px;
-font-size: x-large;
-color:#00a087
+#nav-bar button {
+  border-radius: 7px;
+  border: 2px black solid;
+  background-color: #FFFFFF;
+  float:right;
+  opacity:0.8;
+  display: inline;
+  height: 70px;
+  width: 150px;
+  margin-top: 5px;
+  font-size: x-large;
+  color:#00a087
 }
-
 
 #nav-bar button:hover{
-opacity:1;
-color:black;
-
+  opacity:1;
+  color:black;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

@@ -17,7 +17,6 @@
  .counter {
   float: right;
   font-style: italic;
-
  }
 
  .new-tweet h2 {
@@ -28,11 +27,10 @@
  }
 
 .counter.overLimit{
-  color: red; /* change color is class changes */
+  color: red;        /* change color as class changes i.e because of negative number */
 }
 
-article.tweet-container{
-
+article.tweet-container {
   border: 2px gray solid;
   border-radius: 7px;
   top: 10px;
@@ -40,55 +38,49 @@ article.tweet-container{
   opacity:0.4;
 }
 
-article.tweet-container:hover{
-opacity:1;
+article.tweet-container:hover {
+  opacity: 1;
 }
 
 section#other-tweets{
   margin-top: 10px;
   margin-left: 32px;
   margin-right: 32px;
-
 }
 
-article header.tweet{
+article header.tweet {
   height: 60px;
   background-color: lightgrey;
   margin: 0;
-
 }
 
-
-
-article h2{
+article h2 {
   margin: 0;
   float: left;
   padding-left: 10px;
   padding-top: 5px
-
 }
 
-article h6.profile-name{
+article h6.profile-name {
   float: right;
   display: inline;
   margin: 0;
   padding: 20px 10px;
-
 }
 
-article .avatars{
+article .avatars {
   float: left;
   width: 80px;
   height: 50px;
 }
 
-article footer{
+article footer {
   height: 30px;
   border-top: lightgrey 1px solid;
   padding-left: 10px;
 }
 
-article .content-holder{
+article .content-holder {
   height: 75px;
   padding-top: 30px;
   padding-left: 20px;
@@ -96,8 +88,8 @@ article .content-holder{
   padding-right: 20px;
 }
 
-article .content{
-  word-wrap: break-word;
+article .content {
+  word-wrap: break-word; /* so that the word in the form stay inside do not spill put */
 }
 
 
