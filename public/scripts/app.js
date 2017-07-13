@@ -94,6 +94,9 @@ $(document).ready(() => {
                   <footer>${moment(tweet.created_at).fromNow()}</footer>
                 </article>`;
 
+                // used moment fromNow by downloading moment.js file to vendor(front-end). this was done inorder to convert
+                //number of milliseconds given in created_at to (1 hour ago).
+
     return $tweet;
   }
 
